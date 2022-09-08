@@ -24,7 +24,7 @@ jobs:
       - name: Login to JFrog 🐸  
         uses: docker/login-action@v1
         with:
-          registry: ${{ secrets.ART-URL}}
+          registry: ${{ secrets.ART_URL}}
           username: ${{ secrets.JFROG_USER_WRITER }}
           password: ${{ secrets.JFROG_PASSWORD_WRITER }}
 
@@ -40,5 +40,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ secrets.ART-URL}}/infrastructure-docker/xen-orchestra:latest
-            ${{ secrets.ART-URL}}/infrastructure-docker/xen-orchestra:${{ env.XO_VERSION }}
+            ${{ secrets.ART_URL}}/infrastructure-docker/xen-orchestra:latest
+            ${{ secrets.ART_URL}}/infrastructure-docker/xen-orchestra:${{ env.XO_VERSION }}
