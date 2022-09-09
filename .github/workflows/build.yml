@@ -39,6 +39,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: |
-            ${{ secrets.ART_URL}}/infrastructure-docker/xen-orchestra:latest
-            ${{ secrets.ART_URL}}/infrastructure-docker/xen-orchestra:${{ env.XO_VERSION }}
+          tags: absenttech.jfrog.io/docker/xen-orchestra:latest
